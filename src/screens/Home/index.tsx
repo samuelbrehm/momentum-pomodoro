@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export function Home() {
   return (
@@ -10,7 +10,7 @@ export function Home() {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'yellow',
+        backgroundColor: '#b4dda6',
       }}
     >
       <Text
