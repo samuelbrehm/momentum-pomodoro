@@ -10,7 +10,7 @@ export function Home() {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#b4dda6',
+        backgroundColor: '#a6c3dd',
       }}
     >
       <Text
