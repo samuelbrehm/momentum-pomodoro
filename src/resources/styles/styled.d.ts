@@ -5,6 +5,5 @@ declare module 'styled-components' {
   type DarkThemeType = typeof DarkTheme;
   type LightThemeType = typeof LightTheme;
 
-  export interface DefaultTheme extends DarkThemeType {}
-  export interface DefaultTheme extends LightThemeType {}
+  export interface DefaultTheme extends DarkThemeType, LightThemeType {}
 }

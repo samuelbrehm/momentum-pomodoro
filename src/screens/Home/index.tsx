@@ -20,7 +20,6 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
-  /* background-color: #fafafa; */
 `;
 
 const Title = styled.Text`
