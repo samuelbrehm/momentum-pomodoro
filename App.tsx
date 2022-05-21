@@ -1,10 +1,13 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 
 import { ThemeProvider } from 'styled-components';
 
-import { Home } from './src/screens/Home';
 import { DarkTheme, LightTheme } from './src/resources/styles/theme';
+
+import { Home } from './src/screens/Home';
+import { OnboardingOne } from './src/screens/OnboardingOne';
 
 const App = () => {
   const colorScheme = useColorScheme();
@@ -19,7 +22,7 @@ const App = () => {
             : LightTheme.colors.background
         }
       />
-      <Home />
+      <OnboardingOne />
     </ThemeProvider>
   );
 };
