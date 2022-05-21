@@ -1,29 +1,29 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+
+import styled from 'styled-components/native';
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export function Home() {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#a6c3dd',
-      }}
-    >
-      <Text
-        style={{
-          fontSize: 20,
-          color: '#fff',
-        }}
-      >
-        Home Screen
-      </Text>
+    <Container>
+      <Title>Home Screen</Title>
 
-      <Icon name="users" size={60} color="#900" />
-      <Icon name="rocket" size={60} color="#900" />
-    </View>
+      <Icon name="users" size={60} color="#F22E63" />
+      <Icon name="rocket" size={60} color="#521439" />
+    </Container>
   );
 }
+
+const Container = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.background};
+  /* background-color: #fafafa; */
+`;
+
+const Title = styled.Text`
+  font-size: 25px;
+  color: #fff;
+`;

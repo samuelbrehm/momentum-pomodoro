@@ -1,9 +1,17 @@
 import React from 'react';
-import { Home } from './src/screens/Home'
+import { StatusBar } from 'react-native';
+
+import { ThemeProvider } from 'styled-components';
+
+import { Home } from './src/screens/Home';
+import { DarkTheme, LightTheme } from './src/resources/styles/theme';
 
 const App = () => {
   return (
-    <Home />      
+    <ThemeProvider theme={DarkTheme}>
+      <StatusBar barStyle="light-content" />
+      <Home />
+    </ThemeProvider>
   );
 };
 
