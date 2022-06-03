@@ -9,6 +9,8 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
 import CompleteDesign from '../../resources/assets/complete_design.svg';
+import { ContentSteps } from '../../components/ContentSteps';
+import { ButtonOnboarding } from '../../components/ButtonOnboarding';
 
 export function OnboardingOne() {
   return (
@@ -22,15 +24,9 @@ export function OnboardingOne() {
         <HeadingTitle numberOfLines={1}>Momentum</HeadingTitle>
       </ContentHeadingTitle>
 
-      <ContentSteps>
-        <Step isActive={true} />
-        <Step isActive={false} />
-        <Step isActive={false} />
-      </ContentSteps>
+      <ContentSteps numberStepActive={1} numberOfSteps={3} />
 
-      <NextButton>
-        <TextButton>Próximo</TextButton>
-      </NextButton>
+      <ButtonOnboarding text="Próximo" />
     </Container>
   );
 }
@@ -60,45 +56,4 @@ const HeadingTitle = styled.Text`
   text-align: center;
   color: ${({ theme }) => theme.colors.text_primary};
   margin-bottom: ${RFValue(3)}px;
-`;
-
-const ContentSteps = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: ${RFValue(6)}px ${RFValue(24)}px;
-`;
-
-interface StepProps {
-  isActive: boolean;
-}
-
-const Step = styled.View<StepProps>`
-  background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.primary : theme.colors.primary_disabled};
-  height: ${RFValue(12)}px;
-  width: ${({ isActive }) => (isActive ? RFValue(36) : RFValue(12))}px;
-  border-radius: ${RFValue(12 / 2)}px;
-  margin-left: ${RFValue(6)}px;
-  margin-right: ${RFValue(6)}px;
-`;
-
-const NextButton = styled(RectButton)`
-  height: ${RFValue(65)}px;
-  width: ${RFValue(240)}px;
-  background-color: ${({ theme }) => theme.colors.primary};
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: ${RFValue(65 / 2)}px;
-
-  margin-bottom: ${getBottomSpace() + 24}px;
-`;
-
-const TextButton = styled.Text`
-  color: ${({ theme }) => theme.colors.text_primary};
-  text-align: center;
-  font-size: ${RFValue(18)}px;
-  font-weight: bold;
 `;

@@ -7,7 +7,11 @@ import { ThemeProvider } from 'styled-components';
 import { DarkTheme, LightTheme } from './src/resources/styles/theme';
 
 import { Home } from './src/screens/Home';
-import { OnboardingOne } from './src/screens/OnboardingOne';
+import {
+  OnboardingOne,
+  OnboardingTwo,
+  OnboardingThree,
+} from './src/screens/Onboarding';
 
 const App = () => {
   const colorScheme = useColorScheme();
