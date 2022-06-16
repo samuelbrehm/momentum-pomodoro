@@ -35,10 +35,10 @@ const Container = styled.View`
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${props => props.theme.colors.background};
 `;
 
-const ImageTask = styled(CompleteDesign).attrs({
+const ImageTask = styled(props => <CompleteDesign {...props} />).attrs({
   height: `${RFValue(240)}`,
 })`
   margin-top: ${getStatusBarHeight() + RFValue(24)}px;
