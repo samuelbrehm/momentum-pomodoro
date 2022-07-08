@@ -1,7 +1,7 @@
 import 'styled-components';
 import { DarkTheme, LightTheme } from './theme';
 
-declare module 'styled-components' {
+declare module 'styled-components/native' {
   type DarkThemeType = typeof DarkTheme;
   type LightThemeType = typeof LightTheme;
 

@@ -14,7 +14,7 @@ import { ButtonOnboarding } from '../../components/ButtonOnboarding';
 
 export function OnboardingOne() {
   return (
-    <Container>
+    <Container testID="onboarding-one">
       <ImageTask />
 
       <ContentHeadingTitle>
@@ -26,7 +26,12 @@ export function OnboardingOne() {
 
       <ContentSteps numberStepActive={1} numberOfSteps={3} />
 
-      <ButtonOnboarding text="Próximo" />
+      <ButtonOnboarding
+        text="Próximo"
+        onPress={() => {
+          console.log('próximo');
+        }}
+      />
     </Container>
   );
 }

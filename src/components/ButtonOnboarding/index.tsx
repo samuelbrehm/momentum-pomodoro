@@ -1,17 +1,17 @@
 import React from 'react';
-import { RectButton } from 'react-native-gesture-handler';
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import styled from 'styled-components/native';
 
-interface Props {
+interface ButtonOnboardingProps extends RectButtonProps {
   text: string;
 }
 
-export function ButtonOnboarding({ text }: Props) {
+export function ButtonOnboarding({ onPress, text }: ButtonOnboardingProps) {
   return (
-    <NextButton>
+    <NextButton onPress={onPress}>
       <TextButton>{text}</TextButton>
     </NextButton>
   );
