@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneboardingTwo should render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#f0f0f0",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 0,
+      },
+    ]
+  }
+>
+  <SvgMock
+    height="471"
+    style={
+      Array [
+        Object {
+          "marginTop": 67,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "space-around",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#030303",
+            "fontSize": 49,
+            "fontWeight": "bold",
+            "marginBottom": 6,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Seja produtivo
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#030303",
+            "fontSize": 49,
+            "fontWeight": "bold",
+            "marginBottom": 6,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      capturando facilmente
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#030303",
+            "fontSize": 49,
+            "fontWeight": "bold",
+            "marginBottom": 6,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      suas demandas
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingBottom": 12,
+          "paddingLeft": 47,
+          "paddingRight": 47,
+          "paddingTop": 12,
+        },
+      ]
+    }
+  >
+    <View
+      isActive={false}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#E5BFC9",
+            "borderRadius": 12,
+            "height": 24,
+            "marginLeft": 12,
+            "marginRight": 12,
+            "width": 24,
+          },
+        ]
+      }
+    />
+    <View
+      isActive={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#E8275B",
+            "borderRadius": 12,
+            "height": 24,
+            "marginLeft": 12,
+            "marginRight": 12,
+            "width": 71,
+          },
+        ]
+      }
+    />
+    <View
+      isActive={false}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#E5BFC9",
+            "borderRadius": 12,
+            "height": 24,
+            "marginLeft": 12,
+            "marginRight": 12,
+            "width": 24,
+          },
+        ]
+      }
+    />
+  </View>
+  <RNGestureHandlerButton
+    activeOpacity={0.105}
+    collapsable={false}
+    handlerTag={1}
+    handlerType="NativeViewGestureHandler"
+    onActiveStateChange={[Function]}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#E8275B",
+        "borderRadius": 64,
+        "justifyContent": "center",
+        "marginBottom": 24,
+        "paddingBottom": 47,
+        "paddingLeft": 177,
+        "paddingRight": 177,
+        "paddingTop": 47,
+      }
+    }
+    underlayColor="black"
+  >
+    <View
+      collapsable={false}
+      style={
+        Object {
+          "backgroundColor": "black",
+          "borderBottomLeftRadius": undefined,
+          "borderBottomRightRadius": undefined,
+          "borderRadius": 64,
+          "borderTopLeftRadius": undefined,
+          "borderTopRightRadius": undefined,
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#030303",
+            "fontSize": 35,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Próximo
+    </Text>
+  </RNGestureHandlerButton>
+</View>
+`;
