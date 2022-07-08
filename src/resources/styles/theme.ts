@@ -18,7 +18,7 @@ const DarkTheme = {
     icons_green_light: '#8BC255',
     icons_gray: '#607D8A',
   },
-};
+}
 
 const LightTheme = {
   colors: {
@@ -41,6 +41,6 @@ const LightTheme = {
     icons_green_light: '#8BC255',
     icons_gray: '#607D8A',
   },
-};
+}
 
-export { DarkTheme, LightTheme };
+export { DarkTheme, LightTheme }

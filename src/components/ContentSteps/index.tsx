@@ -1,31 +1,31 @@
-import React from 'react';
+import React from 'react'
 
-import styled from 'styled-components/native';
-import { RFValue } from 'react-native-responsive-fontsize';
+import styled from 'styled-components/native'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 type LessThan<N extends number, A extends any[] = []> = N extends A['length']
   ? A[number]
-  : LessThan<N, [...A, A['length']]>;
+  : LessThan<N, [...A, A['length']]>
 
 type NumericRange<F extends number, T extends number> = Exclude<
   T | LessThan<T>,
   LessThan<F>
->;
+>
 
-type NumberStep = NumericRange<1, 3>;
+type NumberStep = NumericRange<1, 3>
 
 interface Props {
-  numberStepActive: NumberStep;
-  numberOfSteps: NumberStep;
+  numberStepActive: NumberStep
+  numberOfSteps: NumberStep
 }
 
 function populateArrayWithSteps(param: number): Array<number> {
-  const arr = Array.from(Array(param).keys()).map(x => x + 1);
-  return arr;
+  const arr = Array.from(Array(param).keys()).map(x => x + 1)
+  return arr
 }
 
 export function ContentSteps({ numberStepActive, numberOfSteps }: Props) {
-  const stepIteractor = populateArrayWithSteps(numberOfSteps);
+  const stepIteractor = populateArrayWithSteps(numberOfSteps)
 
   return (
     <Container>
@@ -36,7 +36,7 @@ export function ContentSteps({ numberStepActive, numberOfSteps }: Props) {
         />
       ))}
     </Container>
-  );
+  )
 }
 
 const Container = styled.View`
@@ -44,10 +44,10 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   padding: ${RFValue(6)}px ${RFValue(24)}px;
-`;
+`
 
 interface StepProps {
-  isActive: boolean;
+  isActive: boolean
 }
 
 const Step = styled.View<StepProps>`
@@ -58,4 +58,4 @@ const Step = styled.View<StepProps>`
   border-radius: ${RFValue(12 / 2)}px;
   margin-left: ${RFValue(6)}px;
   margin-right: ${RFValue(6)}px;
-`;
+`

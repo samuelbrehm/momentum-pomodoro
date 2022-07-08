@@ -1,14 +1,14 @@
-import { ThemeProvider } from 'styled-components/native';
-import { DarkTheme, LightTheme } from '../resources/styles/theme';
-import React from 'react';
-import { StatusBar, useColorScheme } from 'react-native';
+import { ThemeProvider } from 'styled-components/native'
+import { DarkTheme, LightTheme } from '../resources/styles/theme'
+import React from 'react'
+import { StatusBar, useColorScheme } from 'react-native'
 
 interface IThemeProps {
-  children: JSX.Element;
+  children: JSX.Element
 }
 
 const Theme = ({ children }: IThemeProps) => {
-  const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme()
 
   return (
     <ThemeProvider theme={colorScheme === 'dark' ? DarkTheme : LightTheme}>
@@ -22,7 +22,7 @@ const Theme = ({ children }: IThemeProps) => {
       />
       {children}
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default Theme;
+export default Theme
