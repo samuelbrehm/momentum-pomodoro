@@ -1,10 +1,9 @@
 import React from 'react'
-import { RectButton } from 'react-native-gesture-handler'
-import {
-  getBottomSpace,
-  getStatusBarHeight,
-} from 'react-native-iphone-x-helper'
+
+import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { RFValue } from 'react-native-responsive-fontsize'
+
+import { RouteNames, ScreenProps } from '../../navigation/INavigation'
 
 import styled from 'styled-components/native'
 
@@ -12,7 +11,9 @@ import CompleteDesign from '../../resources/assets/complete_design.svg'
 import { ContentSteps } from '../../components/ContentSteps'
 import { ButtonOnboarding } from '../../components/ButtonOnboarding'
 
-export function OnboardingTwo() {
+export type IOnboardingTwoProps = ScreenProps<RouteNames.OneboardingTwo>
+
+export function OnboardingTwo({ navigation }: IOnboardingTwoProps) {
   return (
     <Container>
       <ImageTask />
@@ -25,7 +26,10 @@ export function OnboardingTwo() {
 
       <ContentSteps numberStepActive={2} numberOfSteps={3} />
 
-      <ButtonOnboarding text="Próximo" />
+      <ButtonOnboarding
+        text="Próximo"
+        onPress={() => navigation.navigate(RouteNames.OneboardingThree)}
+      />
     </Container>
   )
 }

@@ -2,18 +2,17 @@ import 'react-native-gesture-handler'
 import React from 'react'
 
 import Theme from './src/components/Theme'
+import { Navigation } from './src/navigation/Navigation'
+import { INavigationProps } from './src/navigation/INavigation'
 
-import { Home } from './src/screens/Home'
-import {
-  OnboardingOne,
-  OnboardingTwo,
-  OnboardingThree,
-} from './src/screens/Onboarding'
+interface IMomentumProps {
+  props: INavigationProps
+}
 
-const App = () => {
+const App = ({ props }: IMomentumProps) => {
   return (
     <Theme>
-      <OnboardingOne />
+      <Navigation {...props} />
     </Theme>
   )
 }

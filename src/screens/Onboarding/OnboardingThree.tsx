@@ -2,13 +2,17 @@ import React from 'react'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { RFValue } from 'react-native-responsive-fontsize'
 
+import { RouteNames, ScreenProps } from '../../navigation/INavigation'
+
 import styled from 'styled-components/native'
 
 import CompleteDesign from '../../resources/assets/complete_design.svg'
 import { ContentSteps } from '../../components/ContentSteps'
 import { ButtonOnboarding } from '../../components/ButtonOnboarding'
 
-export function OnboardingThree() {
+export type IOnboardingThreeProps = ScreenProps<RouteNames.OneboardingThree>
+
+export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
   return (
     <Container>
       <ImageTask />
@@ -21,7 +25,10 @@ export function OnboardingThree() {
 
       <ContentSteps numberStepActive={3} numberOfSteps={3} />
 
-      <ButtonOnboarding text="Começar" />
+      <ButtonOnboarding
+        text="Começar"
+        onPress={() => navigation.navigate(RouteNames.Home)}
+      />
     </Container>
   )
 }

@@ -1,6 +1,9 @@
 import React from 'react'
+
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { RFValue } from 'react-native-responsive-fontsize'
+
+import { RouteNames, ScreenProps } from '../../navigation/INavigation'
 
 import styled from 'styled-components/native'
 
@@ -8,7 +11,9 @@ import CompleteDesign from '../../resources/assets/complete_design.svg'
 import { ContentSteps } from '../../components/ContentSteps'
 import { ButtonOnboarding } from '../../components/ButtonOnboarding'
 
-export function OnboardingOne() {
+export type IOnboardingOneProps = ScreenProps<RouteNames.OneboardingOne>
+
+export function OnboardingOne({ navigation }: IOnboardingOneProps) {
   return (
     <Container testID="onboarding-one">
       <ImageTask />
@@ -24,9 +29,7 @@ export function OnboardingOne() {
 
       <ButtonOnboarding
         text="Próximo"
-        onPress={() => {
-          console.log('próximo')
-        }}
+        onPress={() => navigation.navigate(RouteNames.OneboardingTwo)}
       />
     </Container>
   )
