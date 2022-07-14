@@ -1,5 +1,6 @@
-import 'react-native-gesture-handler'
 import React from 'react'
+
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 import Theme from './src/components/Theme'
 import { Navigation } from './src/navigation/Navigation'
@@ -12,7 +13,9 @@ interface IMomentumProps {
 const App = ({ props }: IMomentumProps) => {
   return (
     <Theme>
-      <Navigation {...props} />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <Navigation {...props} />
+      </GestureHandlerRootView>
     </Theme>
   )
 }
