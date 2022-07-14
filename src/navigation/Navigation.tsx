@@ -15,6 +15,9 @@ export function Navigation({ path }: INavigationProps) {
           component={OnboardingOne}
           options={{
             headerShown: false,
+            fullScreenGestureEnabled: true,
+            gestureDirection: 'horizontal',
+            animation: 'slide_from_right',
           }}
         />
         <Stack.Screen

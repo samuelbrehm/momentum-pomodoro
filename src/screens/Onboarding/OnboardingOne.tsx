@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { RFValue } from 'react-native-responsive-fontsize'
@@ -14,10 +14,6 @@ import { ButtonOnboarding } from '../../components/ButtonOnboarding'
 export type IOnboardingOneProps = ScreenProps<RouteNames.OneboardingOne>
 
 export function OnboardingOne({ navigation }: IOnboardingOneProps) {
-  useEffect(() => {
-    console.log('Did Loading OnboardingOne')
-  }, [])
-
   return (
     <Container testID="onboarding-one">
       <ImageTask />
