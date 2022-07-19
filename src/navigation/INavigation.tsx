@@ -20,16 +20,7 @@ export interface RootStackParamList extends ParamListBase {
   OneboardingTwo: undefined
   OneboardingThree: undefined
   Home: undefined
-
-  // Home: IMinhasProps;
-  // Profile: { userId: string };
-  // Feed: { sort: 'latest' | 'top' } | undefined;
 }
-
-// interface IMinhasProps {
-//   userId: string
-//   param2: string
-// }
 
 export type ScreenProps<RouteNames extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, RouteNames>

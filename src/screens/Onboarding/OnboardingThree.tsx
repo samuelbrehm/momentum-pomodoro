@@ -20,10 +20,7 @@ export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
   const isFirstAccess = useSelector(users.selectFirstAccess)
 
   function handleFisrtAccess(): void {
-    console.log('isFirstAccess', isFirstAccess)
     dispatch(users.startOnboarding())
-    dispatch(users.loginUser({ username: 'admin teste' }))
-    console.log('isFirstAccess', isFirstAccess)
     navigation.navigate(RouteNames.Home)
   }
 

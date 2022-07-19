@@ -3,6 +3,9 @@ import { SagaIterator } from 'redux-saga'
 import { DefaultRootState } from 'react-redux'
 import { put, takeLatest } from 'redux-saga/effects'
 
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { keyUserCached } from '../../infra/constants/cached-values-users'
+
 export interface UserData {
   username: string
 }
@@ -33,8 +36,8 @@ export type Actions =
   | { type: '' }
 
 export type State = {
-  firstAccess: boolean
   username: UserData | null
+  firstAccess: boolean
 }
 
 export const INITIAL_STATE: State = {
@@ -92,6 +95,16 @@ export function* usersWorker(): SagaIterator {
   }
 }
 
+export function* userFirstAccessWorker(): SagaIterator {
+  try {
+    // colocar usuário no cache com async storage
+    yield put(startOnboarding())
+  } catch (error) {
+    console.log('error saga users', error)
+  }
+}
+
 export function* watch(): SagaIterator {
   yield takeLatest(Types.LOGIN, usersWorker)
+  yield takeLatest(Types.FISRT_ACCESS, userFirstAccessWorker)
 }
