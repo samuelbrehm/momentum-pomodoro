@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { RFValue } from 'react-native-responsive-fontsize'
 
@@ -10,9 +10,27 @@ import CompleteDesign from '../../resources/assets/complete_design.svg'
 import { ContentSteps } from '../../components/ContentSteps'
 import { ButtonOnboarding } from '../../components/ButtonOnboarding'
 
+import { useDispatch, useSelector } from 'react-redux'
+import * as users from '../../redux/users/users'
+
 export type IOnboardingThreeProps = ScreenProps<RouteNames.OneboardingThree>
 
 export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
+  const dispatch = useDispatch()
+  const isFirstAccess = useSelector(users.selectFirstAccess)
+
+  function handleFisrtAccess(): void {
+    console.log('isFirstAccess', isFirstAccess)
+    dispatch(users.startOnboarding())
+    dispatch(users.loginUser({ username: 'admin teste' }))
+    console.log('isFirstAccess', isFirstAccess)
+    navigation.navigate(RouteNames.Home)
+  }
+
+  useEffect(() => {
+    console.log('isFirstAccess effect', isFirstAccess)
+  }, [isFirstAccess])
+
   return (
     <Container>
       <ImageTask />
@@ -27,7 +45,8 @@ export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
 
       <ButtonOnboarding
         text="Começar"
-        onPress={() => navigation.navigate(RouteNames.Home)}
+        // onPress={() => navigation.navigate(RouteNames.Home)}
+        onPress={handleFisrtAccess}
       />
     </Container>
   )
