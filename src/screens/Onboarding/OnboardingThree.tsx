@@ -20,7 +20,7 @@ export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
   const isFirstAccess = useSelector(users.selectFirstAccess)
 
   function handleFisrtAccess(): void {
-    dispatch(users.startOnboarding())
+    // dispatch(users.startOnboarding())
     navigation.navigate(RouteNames.Home)
   }
 
@@ -43,7 +43,10 @@ export function OnboardingThree({ navigation }: IOnboardingThreeProps) {
       <ButtonOnboarding
         text="Começar"
         // onPress={() => navigation.navigate(RouteNames.Home)}
-        onPress={handleFisrtAccess}
+        // onPress={handleFisrtAccess}
+        onPress={() => {
+          handleFisrtAccess()
+        }}
       />
     </Container>
   )
