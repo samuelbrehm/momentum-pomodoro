@@ -19,7 +19,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: src
+          projectBaseDir: /
   sonarcloudScan2:
     name: SonarCloudScaniOS
     runs-on: ubuntu-latest
